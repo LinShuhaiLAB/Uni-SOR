@@ -72,7 +72,6 @@
 </table>
 
 </div>
----
 
 ## Overview
 Degradation of high-fidelity spatial information in biomedical imaging compromises analytical reliability. Despite advancements in data reconstruction for MSI, a unified framework spanning microscopy and spatially-resolved multi-omics with robust generalizability and biologically faithful reconstruction, has not been established yet. Here, we present **Uni-SOR**, a unified framework built on a prior-constrained coarse-to-refinement principle. Uni-SOR estimates coarse images derived from high-fidelity information degradation and refines residual discrepancies under task-specific consistency constraints, respectively. We validate Uni-SOR’s generalizability across multiple microscopy and spatially-resolved multi-omics systems with significant improvements across diverse restoration metrics. Remarkably, even with **93.75%** high-frequency information loss, Uni-SOR still enables efficiently restoration and preserves concordance with over **90%** area under the curve in cross-scale analysis. Together, we demonstrate that Uni-SOR consistently outperforms the existing methods in defocused imaging, super-resolution and sparse sampling reconstruction of microscopy and spatially-resolved multi-omics with heterogeneous profiles, and enables high-fidelity high-frequency information recovery to facilitate biological exploration.
