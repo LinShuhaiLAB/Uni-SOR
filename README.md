@@ -8,10 +8,10 @@
 
 <br>
 
-<img src="https://img.shields.io/badge/Spatially--resolved%20multi--omics-Recovery-7C3AED?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Spatially-resolved multi-omics-Recovery-7C3AED?style=for-the-badge" />
 <img src="https://img.shields.io/badge/Microscopy-Restoration-06B6D4?style=for-the-badge" />
-<img src="https://img.shields.io/badge/Multi--modal%20Analysis-F59E0B?style=for-the-badge" />
-<img src="https://img.shields.io/badge/Demo%20SRP & SIM-10B981?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Multi--modal Analysis-F59E0B?style=for-the-badge" />
+<img src="https://img.shields.io/badge/SRP & SIM-10B981?style=for-the-badge" />
 
 <br><br>
 
