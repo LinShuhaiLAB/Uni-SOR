@@ -2,7 +2,7 @@
 
 # Uni-SOR
 
-### A unified framework for high-fidelity recovery in spatially-resolved multi-omics and microscopy
+## A unified framework for high-fidelity recovery in spatially-resolved multi-omics and microscopy
 
 **Recover sparse, blurred, low-resolution and degraded spatial signals across omics and imaging modalities with one unified framework.**
 
