@@ -140,9 +140,9 @@ If Uni-SOR is useful for your research, please cite our work.
 
 ```bibtex
 @article{unisor2026,
-  title={Uni-SOR: A unified framework for high-fidelity recovery in spatially-resolved multi-omics and microscopy},
-  author={Your Name and Collaborators},
-  journal={},
+  title={Uni-SOR: unified framework for high-fidelity recovery in spatially-resolved multi-omics and microscop},
+  author={Hao Xu, Yu Zheng, Xiaopin Lai, Tianci Gao, Zhongze Wang, Yiting Wu, Yucheng Dai, Fangmeng Fu, Guihua Wang, Song-Ling Wang, Mao Li, Tie Shen, Shu-Hai Lin},
+  journal={xxx},
   year={2026}
 }
 ```
