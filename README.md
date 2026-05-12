@@ -12,20 +12,66 @@
 <img src="https://img.shields.io/badge/SRT-10x%20Genomics%20Visium-10B981?style=for-the-badge" /><br>
 <img src="https://img.shields.io/badge/SRP-PhenoCycler--Fusion%202.0-12C145?style=for-the-badge" /><br>
 <img src="https://img.shields.io/badge/Microscopy-H%26E%20%7C%20mIF%20%7C%20SIM%20%7C%20IHC-06B6D4?style=for-the-badge" /><br>
-<br>
-**Supported platforms and modalities**
-| Category | Full name | Standard abbreviation |
-| --- | --- | --- |
-| Mass spectrometry imaging (MSI) | Time-of-Flight Secondary Ion Mass Spectrometry | ToF-SIMS (200 nm, 1um) |
-| Mass spectrometry imaging (MSI) | Desorption Electrospray Ionization Mass Spectrometry | DESI-MS (50um) |
-| Mass spectrometry imaging (MSI) | Matrix-Assisted Laser Desorption Ionization Mass Spectrometry | MALDI-MS (50um) |
-| Labeled mass spectrometry imaging (Labeled-MSI) | Imaging Mass Cytometry | IMC (1um) |
-| Spatially-resolved transcriptomics (SRT) | 10x Genomics Visium spatially resolved transcriptomics | SRT (25um, 100um)|
-| Spatially-resolved proteomics (SRP) | PhenoCycler-Fusion 2.0 spatially resolved proteomics | SRP (1um)|
-| Histological imaging | Hematoxylin and Eosin staining | H&E (20X, 40X)|
-| Immunofluorescence imaging | Multiplex Immunofluorescence | mIF |
-| Super-resolution microscopy | Structured Illumination Microscopy | SIM |
-| Immunohistochemical imaging | Immunohistochemistry | IHC |
+<div align="center">
+<b>Supported platforms and modalities</b>
+<table>
+  <tr bgcolor="#f2f2f2" align="center">
+    <th align="center"><big><b>Category</b></big></th>
+    <th align="center"><big><b>Full name</b></big></th>
+    <th align="center"><big><b>Standard abbreviation</b></big></th>
+  </tr>
+  <tr align="center">
+    <td align="center"><small>Mass spectrometry imaging (MSI)</small></td>
+    <td align="center"><small>Time-of-Flight Secondary Ion Mass Spectrometry</small></td>
+    <td align="center"><small>ToF-SIMS (200 nm, 1 μm)</small></td>
+  </tr>
+  <tr align="center">
+    <td align="center"><small>Mass spectrometry imaging (MSI)</small></td>
+    <td align="center"><small>Desorption Electrospray Ionization Mass Spectrometry</small></td>
+    <td align="center"><small>DESI-MS (50 μm)</small></td>
+  </tr>
+  <tr align="center">
+    <td align="center"><small>Mass spectrometry imaging (MSI)</small></td>
+    <td align="center"><small>Matrix-Assisted Laser Desorption/Ionization Mass Spectrometry</small></td>
+    <td align="center"><small>MALDI-MS (50 μm)</small></td>
+  </tr>
+  <tr align="center">
+    <td align="center"><small>Labeled mass spectrometry imaging (labeled MSI)</small></td>
+    <td align="center"><small>Imaging Mass Cytometry</small></td>
+    <td align="center"><small>IMC (1 μm)</small></td>
+  </tr>
+  <tr align="center">
+    <td align="center"><small>Spatially-resolved transcriptomics (SRT)</small></td>
+    <td align="center"><small>10x Genomics Visium spatially-resolved transcriptomics</small></td>
+    <td align="center"><small>SRT (25 μm, 100 μm)</small></td>
+  </tr>
+  <tr align="center">
+    <td align="center"><small>Spatially-resolved proteomics (SRP)</small></td>
+    <td align="center"><small>PhenoCycler-Fusion 2.0 spatially-resolved proteomics</small></td>
+    <td align="center"><small>SRP (1 μm)</small></td>
+  </tr>
+  <tr align="center">
+    <td align="center"><small>Histological imaging</small></td>
+    <td align="center"><small>Hematoxylin and Eosin staining</small></td>
+    <td align="center"><small>H&amp;E (20×, 40×)</small></td>
+  </tr>
+  <tr align="center">
+    <td align="center"><small>Immunofluorescence imaging</small></td>
+    <td align="center"><small>Multiplex Immunofluorescence</small></td>
+    <td align="center"><small>mIF</small></td>
+  </tr>
+  <tr align="center">
+    <td align="center"><small>Super-resolution microscopy</small></td>
+    <td align="center"><small>Structured Illumination Microscopy</small></td>
+    <td align="center"><small>SIM</small></td>
+  </tr>
+  <tr align="center">
+    <td align="center"><small>Immunohistochemical imaging</small></td>
+    <td align="center"><small>Immunohistochemistry</small></td>
+    <td align="center"><small>IHC</small></td>
+  </tr>
+</table>
+
 </div>
 ---
 ## Overview
