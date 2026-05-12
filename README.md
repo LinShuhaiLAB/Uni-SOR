@@ -13,7 +13,7 @@
 <img src="https://img.shields.io/badge/SRP-PhenoCycler--Fusion%202.0-12C145?style=for-the-badge" /><br>
 <img src="https://img.shields.io/badge/Microscopy-H%26E%20%7C%20mIF%20%7C%20SIM%20%7C%20IHC-06B6D4?style=for-the-badge" /><br>
 <div align="center">
-<b>Supported platforms and modalities</b>
+<b>**Supported platforms and modalities**</b><br>
 <table>
   <tr bgcolor="#f2f2f2" align="center">
     <th align="center"><big><b>Category</b></big></th>
