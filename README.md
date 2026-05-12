@@ -5,38 +5,29 @@
 ## A unified framework for high-fidelity recovery in spatially-resolved multi-omics and microscopy
 
 **We developed Uni-SOR, a unified framework for reconstruction across diverse forms of biological imaging degradation, including defocus-blurring, low-resolution and sparse-sampling.**
-
 <br>
-
 <img src="https://img.shields.io/badge/Scope-Spatially--Resolved%20Multi--Omics%20Recovery-7C3AED?style=for-the-badge" />
 <img src="https://img.shields.io/badge/Scope-Microscopy%20Recovery-06B6D4?style=for-the-badge" /><br>
 <img src="https://img.shields.io/badge/MSI-ToF--SIMS%20%7C%20DESI--MS%20%7C%20MALDI--MS%20%7C%20IMC-F59E0B?style=for-the-badge" /><br>
 <img src="https://img.shields.io/badge/SRT-10x%20Genomics%20Visium-10B981?style=for-the-badge" /><br>
 <img src="https://img.shields.io/badge/SRP-PhenoCycler--Fusion%202.0-12C145?style=for-the-badge" /><br>
 <img src="https://img.shields.io/badge/Microscopy-H%26E%20%7C%20mIF%20%7C%20SIM%20%7C%20IHC-06B6D4?style=for-the-badge" /><br>
-
 <br>
-
 **Supported platforms and modalities**
-
 | Category | Full name | Standard abbreviation |
 | --- | --- | --- |
-| Mass spectrometry imaging | Time-of-Flight Secondary Ion Mass Spectrometry | ToF-SIMS |
-| Mass spectrometry imaging | Desorption Electrospray Ionization Mass Spectrometry | DESI-MS |
-| Mass spectrometry imaging | Matrix-Assisted Laser Desorption/Ionization Mass Spectrometry | MALDI-MS |
-| Labeled mass spectrometry imaging | Imaging Mass Cytometry | IMC |
-| Spatially resolved transcriptomics | 10x Genomics Visium spatially resolved transcriptomics | SRT |
-| Spatially resolved proteomics | PhenoCycler-Fusion 2.0 spatially resolved proteomics | SRP |
+| Mass spectrometry imaging (MSI) | Time-of-Flight Secondary Ion Mass Spectrometry | ToF-SIMS (200 nm and 1um) |
+| Mass spectrometry imaging (MSI) | Desorption Electrospray Ionization Mass Spectrometry | DESI-MS (50um) |
+| Mass spectrometry imaging (MSI) | Matrix-Assisted Laser Desorption Ionization Mass Spectrometry | MALDI-MS (50um) |
+| Labeled mass spectrometry imaging (Labeled-MSI) | Imaging Mass Cytometry | IMC (1um) |
+| Spatially-resolved transcriptomics (SRT) | 10x Genomics Visium spatially resolved transcriptomics | SRT (25um, 100um)|
+| Spatially-resolved proteomics (SRP) | PhenoCycler-Fusion 2.0 spatially resolved proteomics | SRP (1um)|
 | Histological imaging | Hematoxylin and Eosin staining | H&E |
 | Immunofluorescence imaging | Multiplex Immunofluorescence | mIF |
 | Super-resolution microscopy | Structured Illumination Microscopy | SIM |
 | Immunohistochemical imaging | Immunohistochemistry | IHC |
-
-
 </div>
-
 ---
-
 ## Overview
 
 **Uni-SOR** is a unified recovery framework designed for high-fidelity reconstruction of spatially-resolved multi-omics and microscopy data. It targets heterogeneous degradation patterns across spatial assays and imaging systems, including sparse sampling, low spatial resolution, defocus blur, signal loss and modality-specific noise.
