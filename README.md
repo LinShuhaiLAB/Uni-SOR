@@ -134,28 +134,6 @@ Recovered outputs can be used directly for visualization, quantitative analysis 
 
 ---
 
-## Framework
-
-```text
-Degraded spatial data
-        鈹�
-        鈻�
-Unified recovery backbone
-        鈹�
-        鈹溾攢鈹€ sparse-sampling recovery
-        鈹溾攢鈹€ super-resolution recovery
-        鈹斺攢鈹€ microscopy restoration
-        鈹�
-        鈻�
-High-fidelity recovered output
-        鈹�
-        鈹溾攢鈹€ cell segmentation
-        鈹溾攢鈹€ IHC prediction
-        鈹斺攢鈹€ MSI-SRT-H&E joint analysis
-```
-
----
-
 ## Applications
 
 Uni-SOR is designed for research scenarios where spatial fidelity directly affects biological interpretation.
