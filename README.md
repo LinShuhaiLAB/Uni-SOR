@@ -1,14 +1,5 @@
 <div align="center">
 
-<img 
-  src="assets/tech_multiply_overlay.gif" 
-  width="100%" 
-  alt="Uni-SOR technology-style multiply overlay animation"
-/>
-
-</div>
-<div align="center">
-
 # Uni-SOR
 
 ## A unified framework for high-fidelity recovery in spatially-resolved multi-omics and microscopy
