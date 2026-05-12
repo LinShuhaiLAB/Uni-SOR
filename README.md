@@ -16,13 +16,13 @@
 **Supported platforms and modalities**
 | Category | Full name | Standard abbreviation |
 | --- | --- | --- |
-| Mass spectrometry imaging (MSI) | Time-of-Flight Secondary Ion Mass Spectrometry | ToF-SIMS (200 nm and 1um) |
+| Mass spectrometry imaging (MSI) | Time-of-Flight Secondary Ion Mass Spectrometry | ToF-SIMS (200 nm, 1um) |
 | Mass spectrometry imaging (MSI) | Desorption Electrospray Ionization Mass Spectrometry | DESI-MS (50um) |
 | Mass spectrometry imaging (MSI) | Matrix-Assisted Laser Desorption Ionization Mass Spectrometry | MALDI-MS (50um) |
 | Labeled mass spectrometry imaging (Labeled-MSI) | Imaging Mass Cytometry | IMC (1um) |
 | Spatially-resolved transcriptomics (SRT) | 10x Genomics Visium spatially resolved transcriptomics | SRT (25um, 100um)|
 | Spatially-resolved proteomics (SRP) | PhenoCycler-Fusion 2.0 spatially resolved proteomics | SRP (1um)|
-| Histological imaging | Hematoxylin and Eosin staining | H&E |
+| Histological imaging | Hematoxylin and Eosin staining | H&E (20X, 40X)|
 | Immunofluorescence imaging | Multiplex Immunofluorescence | mIF |
 | Super-resolution microscopy | Structured Illumination Microscopy | SIM |
 | Immunohistochemical imaging | Immunohistochemistry | IHC |
