@@ -135,21 +135,6 @@ Only **SRP** and **SIM** demo files are currently included in this repository.
 
 ---
 
-## Expected input and output
-
-Uni-SOR takes degraded spatial omics or microscopy data as input and produces recovered high-fidelity outputs.
-
-```text
-Input
-low-quality spatial signal, sparse measurement, low-resolution image or degraded microscopy image
-
-Output
-recovered spatial signal or microscopy image with enhanced fidelity
-```
-
-Recovered outputs can be used directly for visualization, quantitative analysis and downstream model-based tasks.
-
----
 
 ## Citation
 
