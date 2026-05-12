@@ -100,7 +100,6 @@ For lightweight tasks, we provide free online access through our [homepage](http
 
 After downloading the repository, run one of the demo scripts according to the task.
 
----
 
 ### Sparse-sampling recovery
 
@@ -108,7 +107,6 @@ After downloading the repository, run one of the demo scripts according to the t
 python "code/run spare-sampling demo.py"
 ```
 
----
 
 ### Super-resolution recovery
 
@@ -116,7 +114,6 @@ python "code/run spare-sampling demo.py"
 python "code/run super-resolution demo.py"
 ```
 
----
 
 ### SIM restoration
 ```bash
