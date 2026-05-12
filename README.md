@@ -72,9 +72,12 @@
 </table>
 
 </div>
+---
 
 ## Overview
 Degradation of high-fidelity spatial information in biomedical imaging compromises analytical reliability. Despite advancements in data reconstruction for MSI, a unified framework spanning microscopy and spatially-resolved multi-omics with robust generalizability and biologically faithful reconstruction, has not been established yet. Here, we present **Uni-SOR**, a unified framework built on a prior-constrained coarse-to-refinement principle. Uni-SOR estimates coarse images derived from high-fidelity information degradation and refines residual discrepancies under task-specific consistency constraints, respectively. We validate Uni-SOR’s generalizability across multiple microscopy and spatially-resolved multi-omics systems with significant improvements across diverse restoration metrics. Remarkably, even with **93.75%** high-frequency information loss, Uni-SOR still enables efficiently restoration and preserves concordance with over **90%** area under the curve in cross-scale analysis. Together, we demonstrate that Uni-SOR consistently outperforms the existing methods in defocused imaging, super-resolution and sparse sampling reconstruction of microscopy and spatially-resolved multi-omics with heterogeneous profiles, and enables high-fidelity high-frequency information recovery to facilitate biological exploration.
+
+---
 
 ## Downstream-ready recovery
 Uni-SOR is designed not only for visual restoration, but also for downstream biological and computational analysis. The recovered outputs can support multiple downstream tasks.
@@ -85,13 +88,20 @@ Uni-SOR is designed not only for visual restoration, but also for downstream bio
 - **Joint analysis across MSI, SRT and H&E**  
   Recovered MSI, SRT and H&E data can be integrated for multi-modal spatial analysis, enabling more reliable alignment between molecular signals and tissue morphology.
 
+
+---
+
 ## Repository status
 This repository currently provides lightweight demo files for **SRP** and **SIM** tasks. 
 For lightweight tasks, we provide free online access through our [homepage](https://www.lifemetabolomics.cn/unisor).
 
+---
+
 ## Quick start
 
 After downloading the repository, run one of the demo scripts according to the task.
+
+---
 
 ### Sparse-sampling recovery
 
@@ -99,11 +109,15 @@ After downloading the repository, run one of the demo scripts according to the t
 python "code/run spare-sampling demo.py"
 ```
 
+---
+
 ### Super-resolution recovery
 
 ```bash
 python "code/run super-resolution demo.py"
 ```
+
+---
 
 ### SIM restoration
 ```bash
@@ -115,8 +129,12 @@ INPUT_TIFF_PATH = "path/to/your/input"
 MODEL_WEIGHTS = "path/to/pretrained/weights"
 ```
 
+---
+
 ## Demo availability
 Only **SRP** and **SIM** demo files are currently included in this repository.
+
+---
 
 ## Expected input and output
 
