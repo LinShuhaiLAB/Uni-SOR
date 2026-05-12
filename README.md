@@ -4,7 +4,7 @@
 
 ## A unified framework for high-fidelity recovery in spatially-resolved multi-omics and microscopy
 
-**Recover sparse, blurred, low-resolution and degraded spatial signals across omics and imaging modalities with one unified framework.**
+**We developed Uni-SOR, a unified framework for reconstruction across diverse forms of biological imaging degradation, including defocus-blurring, low-resolution and sparse-sampling.**
 
 <br>
 
@@ -15,7 +15,6 @@
 
 <br><br>
 
-**TOF-SIMS 路 DESI-MS 路 MALDI-MS 路 IMC 路 SRT 路 SRP 路 H&E 路 SIM 路 miF 路 IHC**
 
 </div>
 
