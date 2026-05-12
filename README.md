@@ -106,32 +106,17 @@ python "code/run super-resolution demo.py"
 ```
 
 ### SIM restoration
-
 ```bash
 python "code/run SIM demo.py"
 ```
-
 Before running a demo, modify the file paths and pretrained weight paths in the corresponding script.
-
 ```python
-input_path = "path/to/your/input"
-output_path = "path/to/save/recovered/results"
-weight_path = "path/to/pretrained/weights"
+INPUT_TIFF_PATH = "path/to/your/input"
+MODEL_WEIGHTS = "path/to/pretrained/weights"
 ```
 
----
-
 ## Demo availability
-
 Only **SRP** and **SIM** demo files are currently included in this repository.
-
-| Demo | Status |
-| --- | --- |
-| SRP sparse-sampling or super-resolution recovery | Available |
-| SIM microscopy restoration | Available |
-| TOF-SIMS, DESI-MS, MALDI-MS, IMC, SRT, H&E, miF and IHC demos | Coming soon |
-
----
 
 ## Expected input and output
 
