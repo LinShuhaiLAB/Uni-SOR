@@ -968,12 +968,4 @@ def main_predict_and_stitch(GRID_POSTPROCESS="none", stride_px=24,
                 print(f"Failed to remove {p['path']}: {e}")
     print("\n=== Processing Complete ===")
     print(f"Output directory: {OUTPUT_DIR}")
-INPUT_DIR = Path(r"D:\bio_inf\02 MSI\20260509空蛋\HE")
-tiff_files = sorted(path
-                    for path in INPUT_DIR.iterdir()
-                    if path.is_file() and path.suffix.lower() in {".tif", ".tiff"})
-if not tiff_files: raise FileNotFoundError(f"No TIFF files found in {INPUT_DIR}")
-for tiff_path in tiff_files:
-    TARGET_ID_PREFIX = tiff_path.stem
-    print(f"\nProcessing TARGET_ID_PREFIX {TARGET_ID_PREFIX}")
-    main_predict_and_stitch(GRID_POSTPROCESS="none", TARGET_ID_PREFIX=TARGET_ID_PREFIX, MODEL_WEIGHTS=MODEL_WEIGHTS)
+main_predict_and_stitch(GRID_POSTPROCESS="none", TARGET_ID_PREFIX='', MODEL_WEIGHTS=MODEL_WEIGHTS)
