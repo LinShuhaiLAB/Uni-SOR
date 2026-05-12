@@ -134,19 +134,6 @@ Recovered outputs can be used directly for visualization, quantitative analysis 
 
 ---
 
-## Applications
-
-Uni-SOR is designed for research scenarios where spatial fidelity directly affects biological interpretation.
-
-- Recovery of sparsely sampled spatial proteomics data
-- Enhancement of low-resolution spatial transcriptomics data
-- Restoration of microscopy images with degraded visual quality
-- Cross-modal integration of MSI, SRT and histology
-- Preprocessing for foundation-model-based tissue analysis
-- Improved visualization of spatial molecular patterns
-
----
-
 ## Citation
 
 If Uni-SOR is useful for your research, please cite our work.
