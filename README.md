@@ -4,7 +4,6 @@
 
 ## A unified framework for high-fidelity recovery in spatially-resolved multi-omics and microscopy
 
-**We developed Uni-SOR, a unified framework for reconstruction across diverse forms of biological imaging degradation, including defocus-blurring, low-resolution and sparse-sampling.**
 
 <br>
 <img src="https://img.shields.io/badge/Scope-Spatially--Resolved%20Multi--Omics%20Recovery-7C3AED?style=for-the-badge" />
