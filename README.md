@@ -36,7 +36,7 @@
     <td align="center"><small>MALDI-MS (50 μm)</small></td>
   </tr>
   <tr align="center">
-    <td align="center"><small>Labeled mass spectrometry imaging (labeled MSI)</small></td>
+    <td align="center"><small>Labeled mass spectrometry imaging (MSI)</small></td>
     <td align="center"><small>Imaging Mass Cytometry</small></td>
     <td align="center"><small>IMC (1 μm)</small></td>
   </tr>
