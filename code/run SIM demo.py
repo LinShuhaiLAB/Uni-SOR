@@ -12,8 +12,8 @@ from tqdm import tqdm
 #             You only need to modify here                 #
 #                                                          #
 ############################################################
-INPUT_PATH = r"D:\input.jpg"
-WEIGHT_PATH = r"D:\bio_inf\02 MSI\给网站的数据\SIM上传Github\ER.pth"
+INPUT_PATH = str(Path(__file__).resolve().parent.parent / "demo for SIM deblurring" / "input.jpg")
+WEIGHT_PATH = str(Path(__file__).resolve().parent.parent / "weights of SRP" / "ER.pth")
 
 
 
@@ -446,23 +446,6 @@ class FastMultiFocalDeblurNet(nn.Module):
         if self.training or return_params:
             return sharp_final, reblur_pred, final_maps
         return sharp_final
-def resolve_weight(weight):
-    path = Path(weight)
-    candidates = [path]
-    if path.suffix == "":
-        candidates.append(path.with_suffix(".pth"))
-    candidates.extend(
-        [
-            Path("checkpoints/refocus/HE") / path,
-            Path("checkpoints/refocus/HE") / path.with_suffix(".pth"),
-            Path("checkpoints/refocus") / path,
-            Path("checkpoints/refocus") / path.with_suffix(".pth"),
-        ]
-    )
-    for candidate in candidates:
-        if candidate.exists():
-            return candidate
-    raise FileNotFoundError(f"Weight not found: {weight}")
 def iter_images(input_dir):
     input_dir = Path(input_dir)
     return sorted(p for p in input_dir.iterdir() if p.is_file() and p.suffix.lower() in IMAGE_SUFFIXES)
@@ -498,33 +481,11 @@ def output_from_tensor(tensor, dtype):
     return image.astype(np.float32)
 def load_state_dict(weight_path, device):
     checkpoint = torch.load(str(weight_path), map_location=device)
-    if isinstance(checkpoint, dict):
-        for key in ("state_dict", "model_state_dict", "model"):
-            if key in checkpoint and isinstance(checkpoint[key], dict):
-                checkpoint = checkpoint[key]
-                break
-    if not isinstance(checkpoint, dict):
-        raise ValueError(f"Unsupported checkpoint format: {weight_path}")
+    if isinstance(checkpoint, dict) and "state_dict" in checkpoint:
+        checkpoint = checkpoint["state_dict"]
     if checkpoint and all(k.startswith("module.") for k in checkpoint.keys()):
         checkpoint = {k[len("module."):]: v for k, v in checkpoint.items()}
-    mapped = {}
-    for k, v in checkpoint.items():
-        if "optical_model.zernike_coeff_predictor." in k:
-            parts = k.split(".")
-            try:
-                idx = int(parts[-2])
-            except ValueError:
-                idx = -1
-            if idx in (1, 3, 5):
-                parts[-2] = str(idx + 1)
-                mapped[".".join(parts)] = v
-                continue
-        if "optical_model.zernike_out." in k:
-            continue
-        if "refiner.delta_head." in k:
-            continue
-        mapped[k] = v
-    return mapped
+    return checkpoint
 def pad_to_multiple(tensor, multiple=4):
     _, _, h, w = tensor.shape
     pad_h = (multiple - h % multiple) % multiple
@@ -542,7 +503,7 @@ def main():
     else:
         os.environ["CUDA_VISIBLE_DEVICES"] = str(GPU)
     image_path = Path(INPUT_PATH)
-    weight_path = resolve_weight(WEIGHT_PATH)
+    weight_path = WEIGHT_PATH
     if not image_path.is_file():
         raise FileNotFoundError(f"Input image not found: {image_path}")
     if image_path.suffix.lower() not in IMAGE_SUFFIXES:

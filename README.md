@@ -107,7 +107,7 @@ After downloading the repository, run one of the demo scripts according to the t
 ### Sparse-sampling recovery
 
 ```bash
-python "code/run spare-sampling demo.py"
+python "code/run sparse-sapmling demo.py"
 ```
 
 

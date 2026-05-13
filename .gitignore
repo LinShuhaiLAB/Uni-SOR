@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# 运行输出
+demo for super-resolution and sparse-sampling/HE/HE_Feature/
+demo for super-resolution and sparse-sampling/HE/HE_FeatureX2/
+demo for super-resolution and sparse-sampling/HE/HE_Heatmap/
+demo for super-resolution and sparse-sampling/HE/HE_HeatmapX2/
+demo for super-resolution and sparse-sampling/HE/original/
+demo for super-resolution and sparse-sampling/HE/sampling/
+demo for super-resolution and sparse-sampling/HE/sparse-sampling preview/
+demo for super-resolution and sparse-sampling/HE/super-resolution preview/
+demo for super-resolution and sparse-sampling/HE/file_mapping*.csv
+demo for super-resolution and sparse-sampling/SRP/*.pkl
+demo for super-resolution and sparse-sampling/SRP/SRP3/
+demo for super-resolution and sparse-sampling/SRP/*Alignment_Result*/
+demo for super-resolution and sparse-sampling/SRP/*HE_Edges*/
+demo for super-resolution and sparse-sampling/SRP/*.tiff
+demo for SIM deblurring/*_refocus.tiff
+
+# Python 构建产物
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+*.so
+
+# 环境
+.venv/
+venv/
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

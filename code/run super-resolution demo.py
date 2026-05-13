@@ -12,8 +12,8 @@ import matplotlib.cm as cm
 #             You only need to modify here                 #
 #                                                          #
 ############################################################
-INPUT_TIFF_PATH = r"D:\demo\HE"
-MODEL_WEIGHTS = r"D:\weights of SRP\super-resolution.pth"
+INPUT_TIFF_PATH = str(Path(__file__).resolve().parent.parent / "demo for super-resolution and sparse-sampling" / "HE")
+MODEL_WEIGHTS = str(Path(__file__).resolve().parent.parent / "weights of SRP" / "super-resolution.pth")
 
 
 
