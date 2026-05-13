@@ -61,7 +61,7 @@
     <td align="center"><small>mIF</small></td>
   </tr>
   <tr align="center">
-    <td align="center"><small>Super-resolution microscopy</small></td>
+    <td align="center"><small>Structured Illumination microscopy</small></td>
     <td align="center"><small>Structured Illumination Microscopy</small></td>
     <td align="center"><small>SIM</small></td>
   </tr>
