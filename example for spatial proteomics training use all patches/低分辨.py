@@ -322,10 +322,6 @@ class BlockCorrelation(nn.Module):
             output[indices] = res_val.to(output.dtype)
         return output
 class GradientSurgeGate(nn.Module):
-    """
-    梯度激增门控模块：
-    专门用于捕捉和增强相邻区域之间的数值激增或骤减。
-    """
     def __init__(self, dim):
         super().__init__()
         sobel_x = torch.tensor([[-1, 0, 1], [-2, 0, 2], [-1, 0, 1]], dtype=torch.float32).view(1, 1, 3, 3)
@@ -350,11 +346,6 @@ class GradientSurgeGate(nn.Module):
         out = x + self.scale * (x * gate * (1.0 + grad_mag))
         return out
 class PatchDiscriminator(nn.Module):
-    """
-    PatchGAN 判别器：
-    输出不是一个单一的真假值，而是一个 N x N 的矩阵，
-    其中每个点代表原图中一块区域 (Patch) 的真假。
-    """
     def __init__(self, in_channels=1, ndf=64, n_layers=3):
         super().__init__()
         kw = 4
@@ -531,7 +522,6 @@ class SingleStageBlockNet(nn.Module):
         out = self.final_conv(enhanced_feat)
         return out
 def apply_grid_median_smoothing(img, h_lines_list, v_lines_list):
-    """向量化的网格中位数平滑"""
     B, C, H, W = img.shape
     blocky_img = img.clone()
     for b in range(B):
@@ -822,7 +812,7 @@ class BlockAwareLoss(nn.Module):
         xx = torch.linspace(0.0, 1.0, wf).view(1, wf)
         rr = torch.sqrt(yy * yy + xx * xx)
         self.register_buffer('freq_weight', rr.pow(2.0))
-        self.gradient_suppress_k = 0.25  # 可调节的k值，表示前k%
+        self.gradient_suppress_k = 0.25  
         sobel_x = torch.tensor([[-1, 0, 1], [-2, 0, 2], [-1, 0, 1]], dtype=torch.float32).view(1, 1, 3, 3)
         sobel_y = torch.tensor([[-1, -2, -1], [0, 0, 0], [1, 2, 1]], dtype=torch.float32).view(1, 1, 3, 3)
         self.register_buffer('sobel_x_suppress', sobel_x)
@@ -1003,13 +993,13 @@ class BlockAwareLoss(nn.Module):
             m32 = valid_mask.float()
             peak_map = peak_cell_mask_map.to(p32.dtype)
             if (peak_map * m32).sum() > 0:
-                under = F.relu(g32 - p32)  # GT > Pred
+                under = F.relu(g32 - p32)  
                 peak_w = (1.0 + self.peak_w_scale * g32).detach()
                 denom_peak = (peak_map * m32).sum().clamp_min(1e-6)
                 loss_peak_under = (under * peak_w * peak_map * m32).sum() / denom_peak
             valley_map = valley_cell_mask_map.to(p32.dtype)
             if (valley_map * m32).sum() > 0:
-                over = F.relu(p32 - g32)  # Pred > GT
+                over = F.relu(p32 - g32)  
                 denom_valley = (valley_map * m32).sum().clamp_min(1e-6)
                 loss_valley_over = (over * valley_map * m32).sum() / denom_valley
             loss_extremes = loss_peak_under + loss_valley_over
@@ -1155,7 +1145,7 @@ class BlockAwareLoss(nn.Module):
                 w_grad_supp * loss_grad_supp
         )
         if self.training:
-            # 记录处理后的值到 stats 以便打印
+            
             self.loss_stats['loss_l1'].append(loss_l1.item())
             self.loss_stats['loss_mape'].append(loss_mape.item())
             self.loss_stats['loss_mse'].append(loss_mse.item())
@@ -1190,7 +1180,7 @@ class BlockAwareLoss(nn.Module):
         for name, weight in loss_components:
             if name in self.loss_stats and self.loss_stats[name]:
                 values = np.array(self.loss_stats[name])
-                # 过滤掉nan和inf
+                
                 values = values[np.isfinite(values)]
                 if len(values) > 0:
                     mean_val = np.mean(values)
@@ -1221,7 +1211,7 @@ class BlockAwareLoss(nn.Module):
         for name, weight in loss_components:
             info = stats_cache[name]
             if info["valid"]:
-                # 计算占比
+                
                 pct = 0.0
                 if total_weighted_sum_from_means > 1e-9:
                     pct = (info["weighted"] / total_weighted_sum_from_means) * 100
@@ -1231,7 +1221,7 @@ class BlockAwareLoss(nn.Module):
                     f"{info['std']:>12.6f} {info['min']:>12.6f} {info['max']:>12.6f}"
                 )
             else:
-                # 无效数据或权重为0且无数据
+                
                 print(
                     f"{name:<20} {weight:>8.1f} | {'NaN/Inf':>12} {'0.0000':>12} {'0.0%':>8} | {'-':>12} {'-':>12} {'-':>12}")
         print(f"{'=' * len(header_str)}")
@@ -1259,7 +1249,6 @@ class BlockAwareLoss(nn.Module):
             for name, count in nan_counts.items():
                 print(f"   - {name}: {count} batches")
     def reset_stats(self):
-        """清空统计数据"""
         for key in self.loss_stats:
             self.loss_stats[key] = []
 def visualize_strict(model, sample, epoch, save_dir, device):
@@ -1353,11 +1342,6 @@ class EarlyStopping:
             if self.counter >= self.patience:
                 self.early_stop = True
 def masked_psnr(pred, gt, valid_mask, eps=1e-8):
-    """
-    pred, gt, valid_mask: [B, 1, H, W]，值域在[0,1]
-    PSNR = 10*log10(MAX^2 / MSE), 这里 MAX=1
-    只在 valid_mask=1 的像素上计算 MSE
-    """
     mse = ((pred - gt) ** 2 * valid_mask).sum() / (valid_mask.sum() + eps)
     mse = torch.clamp(mse, min=eps)
     psnr = 10.0 * torch.log10(1.0 / mse)
@@ -1465,15 +1449,13 @@ def train_pipeline():
     best_val_psnr = -1e9
 
     def check_model_params(model):
-        """检查模型参数是否包含 NaN/Inf"""
         for name, param in model.named_parameters():
             if not torch.isfinite(param).all():
                 return False, name
         return True, None
 
     def try_load_rollback_checkpoint(model, save_dir, device):
-        """尝试加载最近的权重以恢复训练"""
-        # 优先加载 best_train，其次 best_val
+        
         p1 = save_dir / "model_best_train_psnr.pth"
         p2 = save_dir / "model_best_val_psnr.pth"
         target = p1 if p1.exists() else (p2 if p2.exists() else None)
@@ -1541,7 +1523,7 @@ def train_pipeline():
                     train_items_count += bs_curr
             except (ValueError, RuntimeError) as e:
                 epoch_error_count += 1
-                print(f"\n[ERROR] Batch failed (#{epoch_error_count}): {e}")
+                print(f"\n[ERROR] Batch failed (
                 optimizer_G.zero_grad(set_to_none=True)
                 torch.cuda.empty_cache()
                 if epoch_error_count >= max_errors_per_epoch:
