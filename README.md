@@ -79,7 +79,7 @@ Degradation of high-fidelity spatial information in biomedical imaging compromis
 
 ![Example](example.png)  
 
-![Example](example.png)
+![Example](example2.png)
 
 ---
 
